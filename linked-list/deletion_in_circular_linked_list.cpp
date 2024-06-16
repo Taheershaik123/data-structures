@@ -7,50 +7,48 @@ class node{
     node(int val){
         data = val;
         next = NULL;
-
     }
 };
 void insertion(node* &head,int val){
     node* n = new node(val);
     if(head == NULL){
-        head = n;
+        head = n ;
         n->next = head;
-        return;
     }
     node* temp = head;
     while(temp->next != head){
-        temp =  temp->next;
+        temp = temp->next;
     }
-    temp->next = n ;
+    temp->next = n;
     n->next = head;
 }
-void display(node*  head){
+void display(node* head){
     node* temp = head;
     if(head == NULL){
-        cout<<"the list is empty"<<endl;
+        cout<<"list is empty"<<endl;
         return;
     }
     do{
         cout<<temp->data<<"->";
         temp = temp->next;
-    }while(temp != head);
+    }while(temp!=head);
     cout<<endl;
 }
-void find(node* &head,int val){
+void deletion(node* &head,int val){
     node* temp = head;
     if(head == NULL){
-        cout<<"the list is empty"<<endl;
+        cout<<"tere is no possible to delete element in the empty list"<<endl;
         return;
-
     }
-    while(temp->next->data!= val &&  temp->next!= head){
-        temp = temp->next;
+    while(temp->next->data!= val && temp->next!= head){
+        temp=temp->next;
     }
-    cout<<temp->next->data<<"<-"<<"element is present in linked list"<<endl;
-
+    node* r = temp->next;
+    temp->next =   temp->next->next;
+    delete r;
 }
 int main(){
-    node* head =NULL;
+    node* head = NULL;
     insertion(head,1);
     insertion(head,2);
     insertion(head,3);
@@ -58,8 +56,8 @@ int main(){
     insertion(head,5);
     insertion(head,6);
     insertion(head,7);
-    insertion(head,8);
-    insertion(head,9);
     display(head);
-    find(head,8);
+    deletion(head,5);
+    display(head);
+
 }
