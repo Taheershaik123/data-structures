@@ -37,8 +37,6 @@ class stack{
     char Top(){
         if(top == NULL){
             cout<<"stack is empty"<<endl;
-          //  return;
-
         }
         return top->data;
     }
