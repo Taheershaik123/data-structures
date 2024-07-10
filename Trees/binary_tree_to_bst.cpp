@@ -37,6 +37,10 @@ int count(node* root){
     
     return coun+1;
 }
+void creatingarray(node* root){
+    int size =  count(root);
+    cout<<size;
+}
 
 int main(){
     node* root = NULL;
@@ -47,6 +51,6 @@ int main(){
     insertion(root,6);
     insertion(root,7);
     insertion(root,8);
-    cout<<count(root);
+    creatingarray(root);
 
 }
