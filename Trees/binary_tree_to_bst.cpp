@@ -1,5 +1,6 @@
 #include<iostream>
 #include<bits/stdc++.h>
+#include<vector>
 using namespace std;
 class node{
     public:
@@ -24,24 +25,24 @@ node* insertion(node* root,int val){
     }
     return root;
 }
-    int coun = 0;
-int count(node* root){
-    if(root!=NULL){
-      coun++;
+void inorder(node*root,vector<int>& val){
+    if(root==NULL){
+        return ;
     }
-    else if(root== NULL){
-        return -1;
-    }
-    count(root->left);
-    count(root->right); 
-    
-    return coun+1;
-}
-void creatingarray(node* root){
-    int size =  count(root);
-    cout<<size;
-}
+    inorder(root->left,val);
+    val.push_back(root->data);
+    inorder(root->right,val);
 
+}
+void creatingarr(node* root){
+    vector<int> element;
+    inorder(root,element);
+    sort(element.begin(),element.end());
+    for(int i=0;i<element.size();i++){
+        cout<<element[i]<<" ";
+    }cout<<endl;
+    
+}
 int main(){
     node* root = NULL;
     root = insertion(root,5);
@@ -51,6 +52,6 @@ int main(){
     insertion(root,6);
     insertion(root,7);
     insertion(root,8);
-    creatingarray(root);
+    creatingarr(root);
 
 }
