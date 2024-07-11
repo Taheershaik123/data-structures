@@ -34,24 +34,34 @@ void inorder(node*root,vector<int>& val){
     inorder(root->right,val);
 
 }
+void preorder(node* root){
+    if(root==NULL){
+        return;
+    }
+    cout<<root->data<<"->";
+    preorder(root->left);
+    preorder(root->right);
+}
 void creatingarr(node* root){
     vector<int> element;
     inorder(root,element);
     sort(element.begin(),element.end());
     for(int i=0;i<element.size();i++){
-        cout<<element[i]<<" ";
+       cout<<element[i]<<" ";
     }cout<<endl;
-    
+
+
+
+
 }
 int main(){
-    node* root = NULL;
-    root = insertion(root,5);
-    insertion(root,2);
-    insertion(root,3);
-    insertion(root,4);
-    insertion(root,6);
-    insertion(root,7);
-    insertion(root,8);
-    creatingarr(root);
+    node* root = new node(5);
+    root->left= new node(10);
+    root->left->left = new node(3);
+    root->left->right = new node(32);
+    root->right = new node(44);
+    root->right->left = new node(43);
+    root->right->right = new node(100);
+     creatingarr(root);
 
 }
