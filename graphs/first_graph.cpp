@@ -1,6 +1,5 @@
 #include<iostream>
 #include<bits/stdc++.h>
-#include<list>
 #include<vector>
 using namespace std;
 class Graph{
@@ -19,7 +18,7 @@ Graph::Graph(int v){
 }
 void Graph::Addedge(int v,int w){
     adj[w][v]=1;
-    adj[w][v]=1;
+    adj[v][w]=1;
 }
 void Graph::printGraph(){
     for(int i=0;i<v;++i){
