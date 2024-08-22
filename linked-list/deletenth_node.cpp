@@ -44,15 +44,21 @@ void linked_list_to_circular(node* &head){
     temp->next = head;
 }
 void search(node* head,int val){
+    int i=0;
     node* temp = head;
+    while(temp!=NULL && temp->data!=val){
+        temp = temp->next;
+        ++i;
+    }
+    cout<<temp->data<<" The postion is "<<i;
 }
 
 void display(node* head){
     node* temp = head;
-    while(temp!=NULL&&temp->next!=head){
+    do{
         cout<<temp->data<<"->";
         temp=temp->next;
-    }
+    }while(temp!=NULL && temp!=head);
     cout<<endl;
 }
 int main(){
@@ -68,5 +74,6 @@ int main(){
     display(head);
     linked_list_to_circular(head);
     display(head);
+    search(head,14);
     
 }
