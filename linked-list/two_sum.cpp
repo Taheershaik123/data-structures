@@ -32,8 +32,8 @@ void display(node* head){
 node* List(node* l1,node* l2){
     node* Listnew = new node();
     node* temp = Listnew;
+     int carry =0;
     while(l1!=NULL||l2!=NULL){
-        int carry =0;
         int x = (l1!=NULL)?l1->data:0;
         int y = (l2!=NULL)?l2->data:0;
         int sum = carry+x+y;
@@ -44,7 +44,13 @@ node* List(node* l1,node* l2){
             l1 = l1->next;
             l2 = l2->next;
         }
+        if (carry>0){
+            temp->next = new node(carry);
+        }
         
     }
     return Listnew;
+}
+int main(){
+    
 }
