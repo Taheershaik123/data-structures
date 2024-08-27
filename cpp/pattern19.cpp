@@ -4,6 +4,10 @@ int main(){
     int n;
     cout<<"Enter the number "<<endl;
     cin>>n;
+    if(n<0){
+        cout<<"Enter the opsitive value : "<<endl;
+        return 0;
+    }
     cout<<endl;
     for(int i=1;i<=n;i++){
         for(int j=1;j<=n;j++){
