@@ -11,7 +11,6 @@ int main(){
     }
     for(int j=0;j<n;j++){
         for(int s=j+1;s<n;s++){
-            
         }
     }
 }
