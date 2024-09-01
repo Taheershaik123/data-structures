@@ -20,7 +20,7 @@ class queue{
     }
     void enqueue(int val){
         node* n = new node(val);
-        if(front == NULL){
+        if(rear == NULL){
             front = rear = n;
             return;
         }
@@ -58,7 +58,7 @@ class stack{
     public:
     void push(int val){
         q2.enqueue(val);
-        if(!q1.empty()){
+        while(!q1.empty()){
             q2.enqueue(q1.dequeue());
             
         }
