@@ -1,58 +1,42 @@
-# 🌍 Touring Website
+# 📚 Data Structures Practice
 
-A modern, responsive touring website designed to help users explore travel destinations, plan their trips, and contact the team directly through an integrated mail feature.
+This repository contains a collection of commonly used data structures implemented in C++, Python, and Java. It is designed for learning, practicing, and improving problem-solving skills.
 
-## ✨ Features
+## ✨ Topics Covered
 
-- 🗺️ Explore top travel destinations with beautiful images and descriptions  
-- 📅 Book or plan trips with a user-friendly interface  
-- 📧 Contact us via mail through a built-in contact form (mail feature enabled)  
-- 📱 Fully responsive design for mobile, tablet, and desktop  
-- 🔍 Search and filter tours by category, date, or destination  
+- Arrays and Strings  
+- Linked Lists  
+- Stacks and Queues  
+- Trees and Binary Trees  
+- Heaps and HashMaps  
+- Graphs and DFS/BFS  
+- Recursion and Backtracking  
+- Sorting and Searching Algorithms
 
-## 📩 Contact Feature
+## 💡 Features
 
-Our website includes a secure contact form where users can:
-- Send inquiries directly via email
-- Get a confirmation message once submitted
-- Use CAPTCHA or form validation for secure submissions
+- Clean, well-commented code  
+- Multiple language support  
+- Practice problems and explanations  
+- Optimized solutions for interviews
 
-> 🔐 Note: You can configure the mail feature using services like **SMTP**, **EmailJS**, or **SendGrid**, based on your backend setup.
+## 🛠 Languages Used
 
-## 💻 Tech Stack
+- ✅ C++  
 
-- **Frontend:** HTML, CSS, JavaScript (or React if used)
-- **Backend:** Node.js / PHP / Python (depending on implementation)
-- **Mail API:** SMTP / EmailJS / Nodemailer / Formspree
+## 🚀 Getting Started
 
-## 📷 Preview
-
-![Touring Website Preview](preview-image.png)
-
-## 🚀 Setup Instructions
-
-1. Clone the repository  
+1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/touring-website.git
-   cd touring-website
-Install dependencies (if any)
+   git clone https://github.com/your-username/datastructures-practice.git
+Choose your language folder (e.g., cpp/, python/, java/)
 
-bash
-Copy
-Edit
-npm install
-Start the server (if backend included)
-
-bash
-Copy
-Edit
-npm start
-Configure the mail service in your .env or config file.
+Open any .cpp, .py, or .java file to begin exploring
 
 📬 Contact
-For questions or feedback, feel free to reach out or use the contact form on the site.
+For any questions or suggestions, feel free to reach out at your-email@example.com.
 
-Happy Traveling! 🧳✈️
+Happy coding! 🚀
 
 yaml
 Copy
@@ -60,8 +44,4 @@ Edit
 
 ---
 
-Let me know:
-- If your website is static or dynamic (PHP, Node.js, etc.)
-- Which mail service you're using (EmailJS, SMTP, etc.)
-
-I can tailor the README better based on that!
+Let me know if you'd like me to add links to specific topics or files inside your r
